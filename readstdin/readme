@@ -1,0 +1,12 @@
+If we run script natively in host, it waits for user input
+Same script inside a container, does not wait, rather prints output only
+
+$ docker run -i mukuntharajaa/readstdin
+Enter your name:
+mrajaa
+Hi hello mrajaa
+
+$ docker run mukuntharajaa/readstdin
+Enter your name:
+Hi hello 
+
