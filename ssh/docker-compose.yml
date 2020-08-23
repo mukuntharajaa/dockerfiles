@@ -1,0 +1,24 @@
+version: '3.1'  # if no version is specified then v1 is assumed. Recommend v2 minimum
+
+services:  # containers. same as docker run
+  ans-target1: # a friendly name. this is also DNS name inside network
+    image: mukuntharajaa/ssh # Optional if you use build:
+    environment: # Optional, same as -e in docker run
+      - SSH_USERNAME=mrajaa
+      - SSH_USERPASS=mrajaa
+    ports:
+      - "2200:22"
+  ans-target2: # a friendly name. this is also DNS name inside network
+    image: mukuntharajaa/ssh # Optional if you use build:
+    environment: # Optional, same as -e in docker run
+      - SSH_USERNAME=mrajaa
+      - SSH_USERPASS=mrajaa
+    ports:
+      - "2201:22"
+  ans-target3: # a friendly name. this is also DNS name inside network
+    image: mukuntharajaa/ssh # Optional if you use build:
+    environment: # Optional, same as -e in docker run
+      - SSH_USERNAME=mrajaa
+      - SSH_USERPASS=mrajaa
+    ports:
+      - "2202:22"

@@ -1,0 +1,13 @@
+
+1) Pull Fedora based ssh image(available in Dockerfile)
+2) run single / multiple instances
+	docker run -d --name test-ssh -p 2200:22 -e SSH_USER=mrajaa -e SSH_USERPASS=mrajaa mukuntharajaa/ssh
+3) ssh -p 2200 mrajaa@localhost
+
+	Here we can not use ip of container(yet to figure out why)
+	Use either localhost or ip address of docker host
+
+	More useful reading at,
+
+	
+4) I am mainly using this container for simulating ansible nodes
