@@ -1,0 +1,5 @@
+FROM fpld-docker-local.bhisoj70.apac.nsn-net.net/fpld-base-os:os-144
+#COPY fhgw-rpmrepo-base-FHGW_21.000.x86_64.rpm /
+#RUN rpm -ivh /fhgw-rpmrepo-base-FHGW_21.000.x86_64.rpm
+RUN rpm -ivh https://bhisoj70.apac.nsn-net.net/artifactory/fhgw-build-local/FHGW_21.000/rpms_repo/latest/fhgw-rpmrepo-base-FHGW_21.000.x86_64.rpm
+CMD sleep 3000

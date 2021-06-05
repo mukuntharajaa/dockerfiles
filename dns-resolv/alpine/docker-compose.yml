@@ -1,0 +1,17 @@
+---
+version: '3'
+
+services:
+  dnsresolv:
+    build:
+      context: .
+      dockerfile: Dockerfile.dns
+    image: dns-resolv:latest
+    networks:
+      dns-net:
+        aliases:
+          - service1.local
+          - service2.local
+
+networks:
+  dns-net:

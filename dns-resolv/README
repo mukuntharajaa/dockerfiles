@@ -1,0 +1,7 @@
+1) Run two processes within container
+2) Each process should listen on "dnsname" rather than hard-coded ip address
+3) Pass necessary parameters to container ( eg: --network-alias for plain docker and --network name=,alias= for docker-swarm and etc)
+4) Make sure, processes are able to bind to address
+
+
+Here we rely on default DNS feature provided by docker daemon.

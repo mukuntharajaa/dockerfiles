@@ -1,0 +1,7 @@
+FROM alpine
+RUN apk add --no-cache gcc musl-dev supervisor
+COPY addrinfo.c / 
+RUN gcc -o dnsresolv /addrinfo.c
+RUN apk del gcc musl-dev
+COPY supervisord.conf /etc/supervisor/supervisord.conf
+CMD ["/usr/bin/supervisord","-c","/etc/supervisor/supervisord.conf"]
